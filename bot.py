@@ -24,15 +24,15 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    message.reply_text('👋 Hi. \nI can get you audio from youtube.🎶\n\nJust send me a keyword and I\'ll send you the audio from the first youtube link that I find.')
+    message.reply_photo('"https://telegra.ph/file/88a4cf2315c4ce37495e5.jpg",caption="Hello {first_name} 🥰My name is Hinata Hyuga©\nI can download any songs🎼 instantly But now i only works for my owner\'s group."')
 
-@bot.on_message(filters.command(['a']))
-def a(client, message):
+@bot.on_message(filters.command(['song']))
+def song(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 Fetching the song...')
+    m = message.reply('🔎 Fetching the song for you...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -66,11 +66,11 @@ def a(client, message):
             return
     except Exception as e:
         m.edit(
-            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+            "✖️ Found Nothing. Sorry babe.\n\nTry another keyword or try to spell it properly."
         )
         print(str(e))
         return
-    m.edit("⏬ Downloading.")
+    m.edit("Yeah I Got The Song 😎\n\n Let me download it for you ⏬.")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
