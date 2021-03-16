@@ -24,7 +24,7 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    message.reply_text('Hello (first_name) 🥰My name is Hinata Hyuga©\nI can get you any audio.🎶\n\nJust send me a keyword and I\'ll send you the audio within seconds.')
+    message.reply_text('Hello there 🥰My name is Hinata Hyuga©\nI can get you any audio 🎶\n\nJust send me the name and I\'ll send you the audio within seconds.')
                       
 @bot.on_message(filters.command(['song']))
 def song(client, message):
