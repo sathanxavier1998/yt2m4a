@@ -24,7 +24,7 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    message.reply_photo('"https://telegra.ph/file/88a4cf2315c4ce37495e5.jpg",caption="Hello {first_name} 🥰My name is Hinata Hyuga©\nI can download any songs🎼 instantly But now i only works for my owner\'s group."')
+    message.reply_photo('https://telegra.ph/file/88a4cf2315c4ce37495e5.jpg,caption="Hello 🥰My name is Hinata Hyuga©\nI can download any songs🎼 instantly But now i only works for my owner\'s group."')
 
 @bot.on_message(filters.command(['song']))
 def song(client, message):
