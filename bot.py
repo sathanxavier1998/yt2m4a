@@ -31,8 +31,8 @@ def start(client, message):
             [InlineKeyboardButton("⚡Contact Owner⚡", url="https://t.me/sathan_of_telegram")]
         ]))
 
-@bot.on_message(filters.command(['start']))
-def start(client, message):
+@bot.on_message(filters.command(['help']))
+def help(client, message):
     text_msg="**How to Use me..?**\n\n /song - any song name\n\n /song - any youtube link\n\n /mp3 - to download songs in mp3 format\n\n**⚠️ Note: I can only download songs under 10 minutes.\n\nIf you like this bot plz support out telegram channels 🦋⃟ 𝄟࿐**"
     bot.send_message(chat_id=message.chat.id, text=text_msg, reply_to_message_id=message.message_id,reply_markup=InlineKeyboardMarkup(
         [
