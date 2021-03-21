@@ -38,7 +38,7 @@ def help(client, message):
         [
             [[InlineKeyboardButton("[CT™] Channel", url="https://t.me/cinemaathattakam_chanel")],
             [InlineKeyboardButton("[CT™] Series", url="https://t.me/cinemaathattakam_series")]
-            [InlineKeyboardButton("പാട്ടു പെട്ടി....🎶🎤", url="https://t.me/paattuppetti")]
+            [InlineKeyboardButton("പാട്ടു പെട്ടി....🎶🎤", url="https://t.me/paattuppetti")],
             [InlineKeyboardButton("🦋MY DEV🦋", url="https://t.me/sathan_of_telegram")]]
         ]))
     
