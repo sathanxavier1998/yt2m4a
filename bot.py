@@ -25,12 +25,23 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    mention = f"HELLO [{message.from_user.first_name}](tg://user?id={message.from_user.id})  MY NAME IS HINATA HYUGA ❣ \n\nI Can Download Any Video Songs For You But Now I Only Works For my Owner's Group.\n\n👉🏻 tap /help to know how to use me ❣️\n\nif you wanna add me to your group plz contact my owner 👇🏻"
+    mention = f"Hello [{message.from_user.first_name}](tg://user?id={message.from_user.id})  my name is Hinata Hyuga ❣ \n\ni can download any video songs from youtube.  But now i only works for my owner's group.\n\n👉🏻 tap /help to know how to use me ❣️\n\nif you wanna add me to your group plz contact my owner 👇🏻"
     bot.send_photo(chat_id=message.chat.id, photo="https://raw.githubusercontent.com/sathanxavier1998/yt2m4a/main/welcome_photo.jpg", caption=mention, reply_to_message_id=message.message_id, reply_markup=InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("⚡Contact Owner⚡", url="https://t.me/sathan_of_telegram")]
         ]))
-                      
+
+@bot.on_message(filters.command(['start']))
+def start(client, message):
+    text_msg="**How to Use me..?**\n\n /song - any song name\n\n /song - any youtube link\n\n /mp3 - to download songs in mp3 format\n\n**⚠️ Note: I can only download songs under 10 minutes.\n\nIf you like this bot plz support out telegram channels 🦋⃟ 𝄟࿐**"
+    bot.send_message(chat_id=message.chat.id, text=text_msg, reply_to_message_id=message.message_id,reply_markup=InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("[CT™] Channel", url="https://t.me/cinemaathattakam_chanel")],
+            [InlineKeyboardButton("[CT™] Series", url="https://t.me/cinemaathattakam_series")],
+            [InlineKeyboardButton("പാട്ടു പെട്ടി....🎶🎤", url="https://t.me/paattuppetti")],
+            [InlineKeyboardButton("🦋MY DEV🦋", url="https://t.me/sathan_of_telegram")]
+        ]))
+    
 @bot.on_message(filters.command(['song']))
 def song(client, message):
     query = ''
