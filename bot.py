@@ -16,6 +16,19 @@ bot = Client(
 
 ## Extra Fns -------------------------------
 
+# Check channel subscribed
+def is_subscribed(bot, query):
+    try:
+        user = bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
+    except UserNotParticipant:
+        pass
+    except Exception as e:
+        logger.exception(e)
+    else:
+        if not user.status == 'kicked':
+            return True
+    return False
+
 # Convert hh:mm:ss to seconds
 def time_to_seconds(time):
     stringt = str(time)
@@ -45,6 +58,9 @@ def help(client, message):
     
 @bot.on_message(filters.command(['song']))
 def song(client, message):
+    if Config.AUTH_CHANNEL and not is_subscribed(bot, query):
+        message.reply(Config.INVITE_MSG)
+        return
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
