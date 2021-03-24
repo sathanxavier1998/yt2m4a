@@ -3,4 +3,4 @@ class Config:
     API_ID = 1436542
     API_HASH = "ace9d0fb8f46300776a985ca357bdfff"
     AUTH_CHANNEL = "@cinemaathattakam_chanel"
-    INVITE_MSG = "YOU SHOULD JOIN HAVE TO JOIN THIS CHANNEL @cinemaathattakam_chanel TO USE ME"
+    INVITE_MSG = "YOU SHOULD JOIN HAVE TO JOIN THIS CHANNEL [📽️സിനിമ തട്ടകം...🎭🎬™®](https://t.me/cinemaathattakam_chanel) TO USE ME"
