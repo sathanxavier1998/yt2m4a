@@ -58,7 +58,7 @@ def help(client, message):
     
 @bot.on_message(filters.command(['song']))
 def song(client, message):
-    if Config.AUTH_CHANNEL and not is_subscribed(bot, query):
+    if Config.AUTH_CHANNEL and not is_subscribed(bot, message):
         message.reply(Config.INVITE_MSG)
         return
     query = ''
