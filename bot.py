@@ -19,7 +19,7 @@ bot = Client(
 # Check channel subscribed
 def is_subscribed(bot, query):
     try:
-        user = bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
+        user = bot.get_chat_member(Config.AUTH_CHANNEL, query.from_user.id)
     except UserNotParticipant:
         pass
     except Exception as e:
