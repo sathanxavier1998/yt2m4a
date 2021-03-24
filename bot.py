@@ -24,7 +24,7 @@ def is_subscribed(bot, query):
     except UserNotParticipant:
         pass
     except Exception as e:
-        logger.exception(e)
+        print(e)
     else:
         if not user.status == 'kicked':
             return True
