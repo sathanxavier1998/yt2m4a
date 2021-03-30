@@ -51,7 +51,7 @@ def help(client, message):
     text_msg="**How to Use me..?**\n\n 🔰 /song - **any song name**\n\n 🔰 /song - **any youtube link**\n\n 🔰 /mp3 - **to download songs in mp3 format**\n\n**⚠️ Note: I can only download songs under 10 minutes.\n\nIf you like this bot plz support out Telegram Channels 🦋⃟ 𝄟࿐**"
     bot.send_message(chat_id=message.chat.id, text=text_msg, reply_to_message_id=message.message_id,reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("[CT™] Channel", url="https://t.me/cinemaathattakam_chanel"),
+            [InlineKeyboardButton("[CT™] Channel", url="https://t.me/cinemaathattakam_channel"),
             InlineKeyboardButton("[CT™] Series", url="https://t.me/cinemaathattakam_series"),
             InlineKeyboardButton("പാട്ടു പെട്ടി 🎶🎤", url="https://t.me/paattuppetti")],
             [InlineKeyboardButton("🦋MY DEV🦋", url="https://t.me/sathan_of_telegram")]
@@ -104,7 +104,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("Yeah I Got The Song 😎\n\n Let me download it for you ⏬.")
+    m.edit("Yeah I Got The Song 😎\n Let me upload it for you ⏬.")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
